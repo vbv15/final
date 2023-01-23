@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday E</title>
+  <style>
+    /* Add some CSS styles for visual appeal */
+    body {
+      background-color: pink;
+      text-align: center;
+    }
+    h1 {
+      
+      font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #553c9a, #b393d3);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+    }
+    #slideshow {
+      width: 600px;
+      margin: 50px auto;
+    }
+    #slideshow img {
+      width: 50%;
+    }
+    #slideshow .caption {
+      font-size: 1.5em;
+      margin-top: 100px;
+    }
+    #animations {
+      width: 200px;
+      margin: 50px auto;
+    }
+    #animations img {
+      width: 100%;
+    }
+  </style>
+  <script>
+    // Add JavaScript to handle the slideshow and animations
+    var slideIndex = 0;
+    var slides = [
+      {
+        src: "https://i.ibb.co/27DQ4FL/photo-2023-01-23-20-00-45.jpg",
+        caption: "You are the best person ever.You brings light to my world and joy to my heart. I'm sorry, I couldnt be there with you"
+      },
+      {
+        src: "https://i.ibb.co/hCSTjN1/photo-2023-01-23-16-59-23.jpg",
+       caption: "You are a straight up stunner. Every day feels like a blessing with you around. "
+      },
+      {
+        src: "https://i.ibb.co/Qf10xYJ/photo-2023-01-23-16-59-15.jpg",
+        caption: " YOU makes my world a better place just by being in it."
+      },
+      
+      {
+        src: "https://i.ibb.co/NmbCJGK/photo-2023-01-23-16-59-07.jpg",
+        caption: "Why you look at me like that?"
+      },
+      {
+        src: "https://i.ibb.co/bK4CQyK/photo-2023-01-23-16-59-03.jpg",
+        caption: "and why you so cute? I love you little snores"
+      },
+      {
+        src: "https://i.ibb.co/Xs8mHWL/photo-2023-01-23-16-58-53.jpg",
+        caption: "You smol like this. I am lucky to have you. I love you "
+      }   
+
+
+    ];
+    function showSlides() {
+      var i;
+      var slide = document.getElementById("slide");
+      var caption = document.getElementById("caption");
+      for (i = 0; i < slides.length; i++) {
+        slide.src = slides[slideIndex].src;
+        caption.innerHTML = slides[slideIndex].caption;
+      }
+      slideIndex++;
+      if (slideIndex > slides.length - 1) {
+        slideIndex = 0;
+      }
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+    function startAnimations() {
+      var animations = document.getElementById("animations");
+      animations.innerHTML = '<img src="https://media.tenor.com/bHha2gx1MXAAAAAi/tkthao219-bubududu.gif" alt="animation 1">' +
+                             '<img src="https://media.tenor.com/a_SlS6AXcLYAAAAi/kukuk-happy-birthday.gif" alt="animation 2">' +
+                             '<img src="https://media.tenor.com/HsjS_965HD8AAAAC/fatcatzcouple-fluffy.gif" alt="animation 3">';
+    }
+  </script>
+</head>
+<body onload="showSlides(); startAnimations();">
+  <h1>Happy Birthday E</h1>
+  <div id="slideshow">
+    <img id="slide" src="https://i.ibb.co/bK4CQyK/photo-2023-01-23-16-59-03.jpg" alt="Slideshow image">
+    <p id="caption" class="caption">Happy birthday to the best person ever, the one who brings light to my world and joy to my heart. I'm sorry, I couldnt be there with you</p>
+  </div>
+  <div id="animations"></div>
+</body>
+</html>
